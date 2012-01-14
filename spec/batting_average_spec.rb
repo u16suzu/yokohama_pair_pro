@@ -42,5 +42,12 @@ describe BattingAverage do
     it "打率の整数部は消去して表示すること" do
       @batting_average.calc_to_s(3, 3, 1).should == ".333"
     end
+    
+    context "打率が10割の場合" do
+      it "1.00と表示すること" do
+        @batting_average.calc_to_s(3, 3, 3).should == "1.00"
+      end
+    end
   end
+
 end
