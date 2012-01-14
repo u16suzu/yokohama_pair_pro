@@ -48,6 +48,12 @@ describe BattingAverage do
         @batting_average.calc_to_s(3, 3, 3).should == "1.00"
       end
     end
+
+    context "打率を計算しない場合" do
+      it "---と表示すること" do
+        @batting_average.calc_to_s(0, 0, 0).should == "---"
+      end
+    end
   end
 
 end
