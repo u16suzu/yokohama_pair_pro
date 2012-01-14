@@ -24,5 +24,11 @@ describe BattingAverage do
         @batting_average.calc(4, 3, 1).should == 0.333
       end
     end
+
+    context "打席数が0の時" do
+      it "打率を計算しないこと(nilを返すこと)" do
+        @batting_average.calc(0, 0, 0).should == nil
+      end
+    end
   end
 end
