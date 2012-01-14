@@ -1,6 +1,6 @@
 class BattingAverage
   def calc(turn, stroke_count, hit_count)
-    0.25
+    hit_count.to_f / stroke_count.to_f
   end
   
 end
