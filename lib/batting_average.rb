@@ -6,7 +6,10 @@ class BattingAverage
   end
 
   def calc_to_s(turn, stroke_count, hit_count)
-    calc(turn, stroke_count, hit_count).to_s.sub(/^0/, "")
+    batting_average = calc(turn, stroke_count, hit_count)
+    return "1.00" if batting_average == 1.0
+
+    batting_average.to_s.sub(/^0/, "")
   end
   
 end
