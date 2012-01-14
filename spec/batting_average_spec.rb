@@ -19,5 +19,10 @@ describe BattingAverage do
       end
     end
     
+    context "4打席3打数1安打の時" do
+      it "打率が0.333になること" do
+        @batting_average.calc(4, 3, 1).should == 0.333
+      end
+    end
   end
 end
