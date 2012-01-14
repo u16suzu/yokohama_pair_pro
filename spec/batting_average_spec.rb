@@ -30,5 +30,11 @@ describe BattingAverage do
         @batting_average.calc(0, 0, 0).should == nil
       end
     end
+
+    context "打席数が0でなく打数が0の場合" do
+      it "0.000と計算すること" do
+        @batting_average.calc(1, 0, 0).should == 0.000
+      end
+    end
   end
 end
